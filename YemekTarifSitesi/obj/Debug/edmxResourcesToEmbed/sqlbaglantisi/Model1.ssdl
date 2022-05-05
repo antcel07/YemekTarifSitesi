@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YemekTarifModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="GununYemegi">
+    <Key>
+      <PropertyRef Name="GununYemegiId" />
+    </Key>
+    <Property Name="GununYemegiId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GununYemegiAd" Type="varchar" MaxLength="50" />
+    <Property Name="GununYemegiMalzeme" Type="varchar" MaxLength="200" />
+    <Property Name="GununYemegiTarif" Type="varchar(max)" />
+    <Property Name="GununYemegiResim" Type="varchar" MaxLength="100" />
+    <Property Name="GununYemegiPuan" Type="tinyint" />
+    <Property Name="GununYemegiTarih" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Hakkimizda">
+    <Key>
+      <PropertyRef Name="MetinId" />
+    </Key>
+    <Property Name="MetinId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Metin" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Kategoriler">
+    <Key>
+      <PropertyRef Name="KategoriId" />
+    </Key>
+    <Property Name="KategoriId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriAd" Type="varchar" MaxLength="50" />
+    <Property Name="KategoriAdet" Type="smallint" />
+    <Property Name="KategoriResim" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Mesajlar">
+    <Key>
+      <PropertyRef Name="MesajId" />
+    </Key>
+    <Property Name="MesajId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MesajGonderen" Type="varchar" MaxLength="50" />
+    <Property Name="MesajBaslik" Type="varchar" MaxLength="20" />
+    <Property Name="MesajMail" Type="varchar" MaxLength="50" />
+    <Property Name="MesajIcerik" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tarifler">
+    <Key>
+      <PropertyRef Name="Tarifid" />
+    </Key>
+    <Property Name="Tarifid" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TarifAd" Type="varchar" MaxLength="50" />
+    <Property Name="TarifMalzeme" Type="varchar" MaxLength="800" />
+    <Property Name="TarifYapilis" Type="varchar(max)" />
+    <Property Name="TarifResim" Type="varchar" MaxLength="50" />
+    <Property Name="TarifSahip" Type="varchar" MaxLength="50" />
+    <Property Name="TarifSahipMail" Type="varchar" MaxLength="50" />
+    <Property Name="TarifDurum" Type="bit" />
+  </EntityType>
+  <EntityType Name="Yemekler">
+    <Key>
+      <PropertyRef Name="YemekId" />
+    </Key>
+    <Property Name="YemekId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YemekAd" Type="varchar" MaxLength="50" />
+    <Property Name="YemekMalzeme" Type="varchar" MaxLength="800" />
+    <Property Name="YemekYapilis" Type="varchar(max)" />
+    <Property Name="YemekResim" Type="varchar" MaxLength="100" />
+    <Property Name="YemekTarih" Type="smalldatetime" />
+    <Property Name="YemekPuan" Type="float" />
+    <Property Name="KategoriId" Type="smallint" />
+    <Property Name="Durum" Type="bit" />
+  </EntityType>
+  <EntityType Name="Yonetici">
+    <Key>
+      <PropertyRef Name="YoneticiId" />
+    </Key>
+    <Property Name="YoneticiId" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YoneticiAdi" Type="varchar" MaxLength="50" />
+    <Property Name="YoneticiSifre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Yorumlar">
+    <Key>
+      <PropertyRef Name="Yorumid" />
+    </Key>
+    <Property Name="Yorumid" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YorumAdSoyad" Type="varchar" MaxLength="50" />
+    <Property Name="YorumMail" Type="varchar" MaxLength="50" />
+    <Property Name="YorumTarih" Type="smalldatetime" />
+    <Property Name="YorumOnay" Type="bit" />
+    <Property Name="Yorumicerik" Type="varchar" MaxLength="500" />
+    <Property Name="YemekId" Type="smallint" />
+  </EntityType>
+  <EntityContainer Name="YemekTarifModelStoreContainer">
+    <EntitySet Name="GununYemegi" EntityType="Self.GununYemegi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hakkimizda" EntityType="Self.Hakkimizda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategoriler" EntityType="Self.Kategoriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mesajlar" EntityType="Self.Mesajlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tarifler" EntityType="Self.Tarifler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yemekler" EntityType="Self.Yemekler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yonetici" EntityType="Self.Yonetici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yorumlar" EntityType="Self.Yorumlar" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

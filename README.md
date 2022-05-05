@@ -1,2 +1,2 @@
-# asp.net ile yemektarifsitesi
- uygulamadır
+# YemekTarifSitesi
+ 

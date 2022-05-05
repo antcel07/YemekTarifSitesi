@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YemekTarifModelStoreContainer" CdmEntityContainer="YemekTarifEntities1">
+    <EntitySetMapping Name="GununYemegi">
+      <EntityTypeMapping TypeName="YemekTarifModel.GununYemegi">
+        <MappingFragment StoreEntitySet="GununYemegi">
+          <ScalarProperty Name="GununYemegiId" ColumnName="GununYemegiId" />
+          <ScalarProperty Name="GununYemegiAd" ColumnName="GununYemegiAd" />
+          <ScalarProperty Name="GununYemegiMalzeme" ColumnName="GununYemegiMalzeme" />
+          <ScalarProperty Name="GununYemegiTarif" ColumnName="GununYemegiTarif" />
+          <ScalarProperty Name="GununYemegiResim" ColumnName="GununYemegiResim" />
+          <ScalarProperty Name="GununYemegiPuan" ColumnName="GununYemegiPuan" />
+          <ScalarProperty Name="GununYemegiTarih" ColumnName="GununYemegiTarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategoriler">
+      <EntityTypeMapping TypeName="YemekTarifModel.Kategoriler">
+        <MappingFragment StoreEntitySet="Kategoriler">
+          <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+          <ScalarProperty Name="KategoriAd" ColumnName="KategoriAd" />
+          <ScalarProperty Name="KategoriAdet" ColumnName="KategoriAdet" />
+          <ScalarProperty Name="KategoriResim" ColumnName="KategoriResim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tarifler">
+      <EntityTypeMapping TypeName="YemekTarifModel.Tarifler">
+        <MappingFragment StoreEntitySet="Tarifler">
+          <ScalarProperty Name="Tarifid" ColumnName="Tarifid" />
+          <ScalarProperty Name="TarifAd" ColumnName="TarifAd" />
+          <ScalarProperty Name="TarifMalzeme" ColumnName="TarifMalzeme" />
+          <ScalarProperty Name="TarifYapilis" ColumnName="TarifYapilis" />
+          <ScalarProperty Name="TarifResim" ColumnName="TarifResim" />
+          <ScalarProperty Name="TarifSahip" ColumnName="TarifSahip" />
+          <ScalarProperty Name="TarifSahipMail" ColumnName="TarifSahipMail" />
+          <ScalarProperty Name="TarifDurum" ColumnName="TarifDurum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yemekler">
+      <EntityTypeMapping TypeName="YemekTarifModel.Yemekler">
+        <MappingFragment StoreEntitySet="Yemekler">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+          <ScalarProperty Name="YemekId" ColumnName="YemekId" />
+          <ScalarProperty Name="YemekAd" ColumnName="YemekAd" />
+          <ScalarProperty Name="YemekMalzeme" ColumnName="YemekMalzeme" />
+          <ScalarProperty Name="YemekYapilis" ColumnName="YemekYapilis" />
+          <ScalarProperty Name="YemekResim" ColumnName="YemekResim" />
+          <ScalarProperty Name="YemekTarih" ColumnName="YemekTarih" />
+          <ScalarProperty Name="YemekPuan" ColumnName="YemekPuan" />
+          <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yonetici">
+      <EntityTypeMapping TypeName="YemekTarifModel.Yonetici">
+        <MappingFragment StoreEntitySet="Yonetici">
+          <ScalarProperty Name="YoneticiId" ColumnName="YoneticiId" />
+          <ScalarProperty Name="YoneticiAdi" ColumnName="YoneticiAdi" />
+          <ScalarProperty Name="YoneticiSifre" ColumnName="YoneticiSifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yorumlar">
+      <EntityTypeMapping TypeName="YemekTarifModel.Yorumlar">
+        <MappingFragment StoreEntitySet="Yorumlar">
+          <ScalarProperty Name="Yorumid" ColumnName="Yorumid" />
+          <ScalarProperty Name="YorumAdSoyad" ColumnName="YorumAdSoyad" />
+          <ScalarProperty Name="YorumMail" ColumnName="YorumMail" />
+          <ScalarProperty Name="YorumTarih" ColumnName="YorumTarih" />
+          <ScalarProperty Name="YorumOnay" ColumnName="YorumOnay" />
+          <ScalarProperty Name="Yorumicerik" ColumnName="Yorumicerik" />
+          <ScalarProperty Name="YemekId" ColumnName="YemekId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mesajlar">
+      <EntityTypeMapping TypeName="YemekTarifModel.Mesajlar">
+        <MappingFragment StoreEntitySet="Mesajlar">
+          <ScalarProperty Name="MesajIcerik" ColumnName="MesajIcerik" />
+          <ScalarProperty Name="MesajMail" ColumnName="MesajMail" />
+          <ScalarProperty Name="MesajBaslik" ColumnName="MesajBaslik" />
+          <ScalarProperty Name="MesajGonderen" ColumnName="MesajGonderen" />
+          <ScalarProperty Name="MesajId" ColumnName="MesajId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="YemekTarifModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hakkimizda">
+      <EntityTypeMapping TypeName="YemekTarifModel.Hakkimizda">
+        <MappingFragment StoreEntitySet="Hakkimizda">
+          <ScalarProperty Name="Metin" ColumnName="Metin" />
+          <ScalarProperty Name="MetinId" ColumnName="MetinId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
